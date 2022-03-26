@@ -21,12 +21,20 @@ def typingInput(text):
 
 # Greeting
 part = Functions.getPartOfDay(datetime.now().hour)    
-typingPrint("Good " + part + "...\n")
+typingPrint("Good " + part + "!\n")
 time.sleep(1)
 
 date = date.today().strftime("%B %d, %Y")
 holiday = Functions.getHoliday()
 typingPrint("Today is " + date + ", also known as " + '\033[1m' + holiday + '\033[0m' + "\n\n")
+time.sleep(1)
+
+# Daily quote
+typingPrint("A quote for you:\n")
+typingPrint('"' + Functions.getQuote() + '"\n\n')
+time.sleep(1)
+typingPrint("Was that inspirational?\n")
+typingPrint("Maybe not.\n\n")
 time.sleep(1)
 
 # Weather Report
@@ -37,7 +45,7 @@ time.sleep(1)
 catFact = typingInput("Would you like to hear a cat fact? \033[1m(y/n) \033[0m")
 
 if catFact == "y":
-  print(Functions.getCatFact() + "\n")
+  typingPrint(Functions.getCatFact() + "\n\n")
 elif catFact == "n":
   responses = ["Oh well.", "Fine.", "I forgot you hate cats.", ">:(", "Maybe tomorrow.", "Wrong answer.", "Lame."]
   typingPrint(random.choice(responses) + "\n\n")
@@ -55,12 +63,25 @@ typingPrint("4. " + df[0][3] + "\n")
 typingPrint("5. " + df[0][4] + "\n\n")
 time.sleep(1)
 responses = ["1st", "2nd", "3rd", "4th", "5th"]
-typingPrint("I should really check out the " + random.choice(responses) + " one out...")
+typingPrint("I should really check out the " + random.choice(responses) + " one...\n\n")
+time.sleep(1)
+
 
 # Top songs
+chart = Functions.getTopSongs()
+typingPrint("These are the top trending songs right now:\n")
+typingPrint("1. " + chart[0].title + " by " + chart[0].artist + "\n")
+typingPrint("2. " + chart[1].title + " by " + chart[1].artist + "\n")
+typingPrint("3. " + chart[2].title + " by " + chart[2].artist + "\n")
+typingPrint("4. " + chart[3].title + " by " + chart[3].artist + "\n")
+typingPrint("5. " + chart[4].title + " by " + chart[4].artist + "\n")
+time.sleep(1)
+typingPrint("Listen to them here: https://www.billboard.com/charts/hot-100/ \n\n")
+time.sleep(2)
 
-
-# 
-
+typingPrint("*Yawn*\n")
 time.sleep(1)  
-typingPrint("Good bye!\n")
+typingPrint("I think that's enough for today. \n")
+typingPrint("Until next time...")
+time.sleep(1)
+typingPrint("<3")
