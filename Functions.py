@@ -103,6 +103,7 @@ def getSearchTrends():
     df.head()
     return df
 
+# returns top 100 songs of the week (uses billboard API)
 def getTopSongs():
     return billboard.ChartData('hot-100')
 
