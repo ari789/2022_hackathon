@@ -26,7 +26,7 @@ time.sleep(1)
 
 date = date.today().strftime("%B %d, %Y")
 holiday = Functions.getHoliday()
-typingPrint("Today is " + date + ", also known as " + '\033[1m' + holiday + '\033[0m' + "\n\n")
+typingPrint("Today is " + date + ", also known as " + holiday + "\n\n")
 time.sleep(1)
 
 # Daily quote
@@ -42,7 +42,7 @@ typingPrint(Functions.getWeather() + "\n\n")
 time.sleep(1)
 
 # Cat Fact
-catFact = typingInput("Would you like to hear a cat fact? \033[1m(y/n) \033[0m")
+catFact = typingInput("Would you like to hear a cat fact? (y/n) ")
 
 if catFact == "y":
   typingPrint(Functions.getCatFact() + "\n\n")
